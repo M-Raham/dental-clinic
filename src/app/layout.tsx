@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BrightSmile Dental Clinic - Exceptional Dental Care in New York",
+  title: "BrightSmile Dental Clinic",
   description: "Experience exceptional dental care at BrightSmile Dental Clinic. We offer comprehensive dental services including cosmetic dentistry, implants, orthodontics, and emergency care. Book your appointment today!",
   keywords: "dental clinic, dentist, teeth whitening, dental implants, orthodontics, cosmetic dentistry, emergency dental care, New York dentist",
   authors: [{ name: "BrightSmile Dental Clinic" }],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "BrightSmile Dental Clinic - Exceptional Dental Care",
+    title: "BrightSmile Dental Clinic",
     description: "Experience exceptional dental care at BrightSmile Dental Clinic. Comprehensive services including cosmetic dentistry, implants, and emergency care.",
     url: "https://brightsmiledental.com",
     siteName: "BrightSmile Dental Clinic",

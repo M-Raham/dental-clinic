@@ -136,7 +136,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/hero-dental-clinic.svg"
+                  src="/hero-dental-clinic.webp"
                   alt="BrightSmile Dental Clinic"
                   width={600}
                   height={400}
