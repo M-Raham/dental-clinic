@@ -20,8 +20,8 @@ const HeroSection = () => {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     
-    // Only start animations on desktop or if user prefers reduced motion
-    const delay = (isMobile || shouldReduceMotion) ? 0 : 100;
+    // More conservative timing for mobile to prevent jitter
+    const delay = isMobile ? 500 : 100;
     
     const timer = setTimeout(() => {
       setIsLoaded(true);
@@ -34,7 +34,7 @@ const HeroSection = () => {
       clearTimeout(timer);
       window.removeEventListener('resize', checkMobile);
     };
-  }, [controls, isMobile, shouldReduceMotion]);
+  }, [controls, shouldReduceMotion]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -68,53 +68,52 @@ const HeroSection = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-linear-to-tr from-teal-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-20 mb-6 md:mb-0">
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Left Content - 60% */}
           {isMobile || shouldReduceMotion ? (
-            <motion.div 
-              className="lg:col-span-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+            <div 
+              className={`lg:col-span-3 transition-all duration-1000 ease-out ${
+                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
             >
-              {/* Static content for mobile - with subtle animations */}
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+              {/* CSS-based animations for mobile to prevent jitter */}
+              <div 
+                className={`inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6 transition-all duration-600 ease-out ${
+                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                }`}
+                style={{ transitionDelay: isLoaded ? '200ms' : '0ms' }}
               >
                 <span>Welcome to BrightSmile Dental Clinic</span>
-              </motion.div>
+              </div>
 
-              <motion.h1 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+              <h1 
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight transition-all duration-600 ease-out ${
+                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                }`}
+                style={{ transitionDelay: isLoaded ? '400ms' : '0ms' }}
               >
                 Your Smile Deserves
                 <span className="block text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">
                   The Best Care
                 </span>
-              </motion.h1>
+              </h1>
 
-              <motion.p 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg text-gray-600 mb-8 leading-relaxed"
+              <p 
+                className={`text-lg text-gray-600 mb-8 leading-relaxed transition-all duration-600 ease-out ${
+                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                }`}
+                style={{ transitionDelay: isLoaded ? '600ms' : '0ms' }}
               >
                 Experience exceptional dental care with our team of experienced professionals. 
                 We combine advanced technology with gentle, personalized treatment to keep your smile healthy and beautiful.
-              </motion.p>
+              </p>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex flex-col sm:flex-row gap-4 mb-12"
+              <div 
+                className={`flex flex-col sm:flex-row gap-4 mb-12 transition-all duration-600 ease-out ${
+                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                }`}
+                style={{ transitionDelay: isLoaded ? '800ms' : '0ms' }}
               >
                 <button className="bg-linear-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-xl flex items-center justify-center group">
                   Book Appointment
@@ -125,13 +124,13 @@ const HeroSection = () => {
                   Learn More
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                className="grid grid-cols-3 gap-6"
+              <div 
+                className={`grid grid-cols-3 gap-6 transition-all duration-600 ease-out ${
+                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                }`}
+                style={{ transitionDelay: isLoaded ? '1000ms' : '0ms' }}
               >
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-2">
@@ -156,8 +155,8 @@ const HeroSection = () => {
                   </div>
                   <p className="text-sm text-gray-600">Years Experience</p>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ) : (
             <motion.div 
               className="lg:col-span-3"
