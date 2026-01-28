@@ -68,7 +68,7 @@ const AppointmentBookingSection = () => {
 
   if (isSubmitted) {
     return (
-      <section id="booking" className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
+      <section id="booking" className="py-20 bg-linear-to-br from-blue-50 to-teal-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -107,7 +107,7 @@ const AppointmentBookingSection = () => {
   }
 
   return (
-    <section id="booking" className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
+    <section id="booking" className="py-20 bg-linear-to-br from-blue-50 to-teal-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
@@ -140,7 +140,7 @@ const AppointmentBookingSection = () => {
                 {/* Name and Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 mb-2">
                       <User className="w-4 h-4 inline mr-1" />
                       Full Name
                     </label>
@@ -150,12 +150,12 @@ const AppointmentBookingSection = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-gray-500 text-black"
                       placeholder="John Doe"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 mb-2">
                       <Phone className="w-4 h-4 inline mr-1" />
                       Phone Number
                     </label>
@@ -165,7 +165,7 @@ const AppointmentBookingSection = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-gray-500 text-black"
                       placeholder="(123) 456-7890"
                     />
                   </div>
@@ -173,7 +173,7 @@ const AppointmentBookingSection = () => {
 
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
                     <Mail className="w-4 h-4 inline mr-1" />
                     Email Address
                   </label>
@@ -183,7 +183,7 @@ const AppointmentBookingSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-gray-500 text-black"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -191,7 +191,7 @@ const AppointmentBookingSection = () => {
                 {/* Date and Time */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 mb-2">
                       <Calendar className="w-4 h-4 inline mr-1" />
                       Preferred Date
                     </label>
@@ -201,11 +201,11 @@ const AppointmentBookingSection = () => {
                       value={formData.date}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-black"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 mb-2">
                       <Clock className="w-4 h-4 inline mr-1" />
                       Preferred Time
                     </label>
@@ -214,7 +214,7 @@ const AppointmentBookingSection = () => {
                       value={formData.time}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-black"
                     >
                       <option value="">Select a time</option>
                       {timeSlots.map(slot => (
@@ -226,7 +226,7 @@ const AppointmentBookingSection = () => {
 
                 {/* Service */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
                     Service Needed
                   </label>
                   <select
@@ -234,7 +234,7 @@ const AppointmentBookingSection = () => {
                     value={formData.service}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-black"
                   >
                     <option value="">Select a service</option>
                     {services.map(service => (
@@ -245,7 +245,7 @@ const AppointmentBookingSection = () => {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
                     Additional Notes (Optional)
                   </label>
                   <textarea
@@ -253,7 +253,7 @@ const AppointmentBookingSection = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none placeholder-gray-500 text-black"
                     placeholder="Tell us about your dental concerns or questions..."
                   />
                 </div>
@@ -263,7 +263,7 @@ const AppointmentBookingSection = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg"
+                  className="w-full bg-linear-to-r from-blue-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg"
                 >
                   Book Appointment
                 </motion.button>
@@ -330,7 +330,7 @@ const AppointmentBookingSection = () => {
             </div>
 
             {/* Insurance Info */}
-            <div className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white">
+            <div className="bg-linear-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Insurance & Payment</h3>
               <p className="mb-4 opacity-90">
                 We accept most major insurance plans and offer flexible payment options to make your dental care affordable.

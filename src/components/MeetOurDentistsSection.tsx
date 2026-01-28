@@ -11,7 +11,7 @@ const MeetOurDentistsSection = () => {
       title: 'Lead Dentist',
       specialization: 'Cosmetic & Restorative Dentistry',
       bio: 'With over 15 years of experience, Dr. Johnson specializes in smile makeovers and full-mouth reconstruction. She is passionate about helping patients achieve their dream smiles.',
-      image: '/api/placeholder/300/300',
+      image: '/expressive-young-woman-posing-studio.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -23,7 +23,7 @@ const MeetOurDentistsSection = () => {
       title: 'Orthodontist',
       specialization: 'Braces & Invisalign',
       bio: 'Dr. Chen is an expert in orthodontic treatment, helping patients of all ages achieve perfectly aligned smiles using the latest techniques and technology.',
-      image: '/api/placeholder/300/300',
+      image: '/portrait-smiling-handsome-male-doctor-man.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -35,7 +35,7 @@ const MeetOurDentistsSection = () => {
       title: 'Periodontist',
       specialization: 'Gum Health & Implants',
       bio: 'Specializing in periodontal health and dental implants, Dr. Rodriguez ensures the foundation of your smile is healthy and strong.',
-      image: '/api/placeholder/300/300',
+      image: '/young-woman-doctor-white-coat-with-stethoscope-smiling-confident-standing-with-arms-crossed-white-wall.jpg',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -105,15 +105,13 @@ const MeetOurDentistsSection = () => {
             >
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-blue-400 to-teal-400 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm">
-                      <span className="text-3xl font-bold">
-                        {dentist.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <Image
+                  src={dentist.image}
+                  alt={dentist.name}
+                  width={300}
+                  height={320}
+                  className="w-full h-full object-cover"
+                />
                 
                 {/* Social Links Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -170,7 +168,7 @@ const MeetOurDentistsSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-xl"
+            className="bg-linear-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-xl"
           >
             Book a Consultation with Our Team
           </motion.button>

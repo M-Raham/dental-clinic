@@ -46,7 +46,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-linear-to-r from-blue-500 to-teal-500 rounded-lg flex items-center justify-center mr-3">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
               <span className="text-xl font-bold">BrightSmile</span>
@@ -171,7 +171,7 @@ const Footer = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors duration-200"
+                  className="bg-blue-600 hover:bg-blue-700 px-2.5 py-2 rounded-r-lg transition-colors duration-200"
                 >
                   Subscribe
                 </motion.button>

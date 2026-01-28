@@ -145,7 +145,7 @@ const TestimonialsSection = () => {
 
                 {/* Patient Info */}
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-teal-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-linear-to-rbr from-blue-400 to-teal-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.initials}
                   </div>
                   <div>

@@ -29,11 +29,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-teal-50">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-linear-to-br from-blue-50 via-white to-teal-50">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-teal-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-linear-to-br from-blue-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-linear-to-tr from-teal-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-20">
@@ -56,7 +56,7 @@ const HeroSection = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
             >
               Your Smile Deserves
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+              <span className="block text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">
                 The Best Care
               </span>
             </motion.h1>
@@ -78,7 +78,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-xl flex items-center justify-center group"
+                className="bg-linear-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-xl flex items-center justify-center group"
               >
                 Book Appointment
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -135,18 +135,13 @@ const HeroSection = () => {
             {/* Main image/visual */}
             <div className="relative">
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-                <div className="bg-gradient-to-br from-blue-400 to-teal-400 h-96 lg:h-full min-h-[400px] flex items-center justify-center">
-                  <div className="text-white text-center p-8">
-                    <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center backdrop-blur-sm">
-                      <Calendar className="w-16 h-16 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">Next Available</h3>
-                    <p className="text-xl">Today at 3:00 PM</p>
-                    <button className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                      Book Now
-                    </button>
-                  </div>
-                </div>
+                <Image
+                  src="/hero-dental-clinic.svg"
+                  alt="BrightSmile Dental Clinic"
+                  width={600}
+                  height={400}
+                  className="w-full h-96 lg:h-full min-h-[400px] object-cover"
+                />
               </div>
               
               {/* Floating cards */}

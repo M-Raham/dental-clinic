@@ -1,0 +1,58 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- After teeth - white and perfectly aligned -->
+  <defs>
+    <linearGradient id="afterGums" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce7f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbcfe8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="toothGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f9ff"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="18" font-weight="bold">After</text>
+  
+  <!-- Gums -->
+  <path d="M 50 150 Q 200 130, 350 150 L 350 200 Q 200 180, 50 200 Z" fill="url(#afterGums)"/>
+  
+  <!-- Teeth - white and perfectly aligned -->
+  <!-- Central incisors -->
+  <rect x="175" y="120" width="25" height="40" rx="5" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="200" y="120" width="25" height="40" rx="5" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Lateral incisors -->
+  <rect x="145" y="125" width="20" height="35" rx="4" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="235" y="125" width="20" height="35" rx="4" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Canines -->
+  <rect x="120" y="130" width="18" height="30" rx="4" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="262" y="130" width="18" height="30" rx="4" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Premolars -->
+  <rect x="95" y="135" width="20" height="25" rx="3" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="285" y="135" width="20" height="25" rx="3" fill="url(#toothGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Sparkle effects -->
+  <g transform="translate(187, 140)">
+    <path d="M 0 -8 L 2 0 L 0 8 L -2 0 Z" fill="#60a5fa" opacity="0.8"/>
+    <path d="M -8 0 L 0 -2 L 8 0 L 0 2 Z" fill="#60a5fa" opacity="0.8"/>
+  </g>
+  
+  <g transform="translate(212, 140)">
+    <path d="M 0 -6 L 1.5 0 L 0 6 L -1.5 0 Z" fill="#60a5fa" opacity="0.6"/>
+    <path d="M -6 0 L 0 -1.5 L 6 0 L 0 1.5 Z" fill="#60a5fa" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(155, 142)">
+    <path d="M 0 -4 L 1 0 L 0 4 L -1 0 Z" fill="#60a5fa" opacity="0.5"/>
+  </g>
+  
+  <g transform="translate(245, 142)">
+    <path d="M 0 -4 L 1 0 L 0 4 L -1 0 Z" fill="#60a5fa" opacity="0.5"/>
+  </g>
+</svg>

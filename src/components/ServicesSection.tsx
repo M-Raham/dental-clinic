@@ -104,7 +104,7 @@ const ServicesSection = () => {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
             >
               {/* Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-16 h-16 bg-linear-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 

@@ -66,7 +66,7 @@ const LocationHoursSection = () => {
             viewport={{ once: true }}
           >
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full">
-              <div className="relative h-96 lg:h-full min-h-[400px] bg-gradient-to-br from-blue-100 to-teal-100">
+              <div className="relative h-96 lg:h-full min-h-[400px] bg-linear-to-br from-blue-100 to-teal-100">
                 {/* Map Placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
@@ -184,7 +184,7 @@ const LocationHoursSection = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white">
+            <div className="bg-linear-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Parking & Accessibility</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">

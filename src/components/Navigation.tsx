@@ -35,7 +35,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-linear-to-r from-blue-500 to-teal-500 rounded-lg flex items-center justify-center mr-3">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
               <span className="text-xl font-bold text-gray-900">BrightSmile</span>
@@ -66,7 +66,7 @@ const Navigation = () => {
             </a>
             <Link
               href="#booking"
-              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="bg-linear-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               Book Appointment
             </Link>
@@ -107,7 +107,7 @@ const Navigation = () => {
                 </a>
                 <Link
                   href="#booking"
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg inline-block mt-3"
+                  className="bg-linear-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg inline-block mt-3"
                   onClick={() => setIsOpen(false)}
                 >
                   Book Appointment

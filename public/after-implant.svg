@@ -1,0 +1,56 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- After dental implant -->
+  <defs>
+    <linearGradient id="gumsHealed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce7f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbcfe8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="implantGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="titaniumGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1d5db;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f9ff"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="18" font-weight="bold">After</text>
+  
+  <!-- Gums -->
+  <path d="M 50 150 Q 200 130, 350 150 L 350 200 Q 200 180, 50 200 Z" fill="url(#gumsHealed)"/>
+  
+  <!-- Teeth with implant -->
+  <!-- Left central incisor -->
+  <rect x="160" y="120" width="25" height="40" rx="5" fill="url(#implantGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Dental implant tooth -->
+  <rect x="190" y="120" width="30" height="40" rx="5" fill="url(#implantGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Implant post (visible part) -->
+  <rect x="203" y="160" width="4" height="15" fill="url(#titaniumGradient)"/>
+  
+  <!-- Right central incisor -->
+  <rect x="225" y="120" width="25" height="40" rx="5" fill="url(#implantGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Other teeth -->
+  <rect x="130" y="125" width="20" height="35" rx="4" fill="url(#implantGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="255" y="125" width="20" height="35" rx="4" fill="url(#implantGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Healing indicator -->
+  <circle cx="205" cy="140" r="3" fill="#10b981" opacity="0.6"/>
+  
+  <!-- Sparkle on new tooth -->
+  <g transform="translate(205, 140)">
+    <path d="M 0 -6 L 1.5 0 L 0 6 L -1.5 0 Z" fill="#60a5fa" opacity="0.7"/>
+    <path d="M -6 0 L 0 -1.5 L 6 0 L 0 1.5 Z" fill="#60a5fa" opacity="0.7"/>
+  </g>
+  
+  <!-- Integration lines showing implant fused with bone -->
+  <path d="M 195 165 Q 205 170, 215 165" stroke="#10b981" stroke-width="2" opacity="0.5"/>
+  <path d="M 197 168 Q 205 172, 213 168" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+</svg>

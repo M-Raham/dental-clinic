@@ -116,7 +116,7 @@ const WhyChooseUsSection = () => {
             >
               {/* Icon and Stat */}
               <div className="flex items-start justify-between mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
+                <div className={`w-16 h-16 bg-linear-to-r ${feature.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-right">
@@ -144,7 +144,7 @@ const WhyChooseUsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-3xl p-12 text-white">
+          <div className="bg-linear-to-r from-blue-500 to-teal-500 rounded-3xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Experience the Difference?
             </h3>

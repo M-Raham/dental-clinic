@@ -141,7 +141,7 @@ const FAQSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8">
+          <div className="bg-linear-to-r from-blue-50 to-teal-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Still Have Questions?
             </h3>

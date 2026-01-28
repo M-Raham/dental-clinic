@@ -1,0 +1,36 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Before missing tooth -->
+  <defs>
+    <linearGradient id="gumsMissing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1d5db;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f9fafb"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Before</text>
+  
+  <!-- Gums -->
+  <path d="M 50 150 Q 200 130, 350 150 L 350 200 Q 200 180, 50 200 Z" fill="url(#gumsMissing)"/>
+  
+  <!-- Teeth with missing front tooth -->
+  <!-- Left central incisor -->
+  <rect x="160" y="120" width="25" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  
+  <!-- Missing tooth space -->
+  <rect x="190" y="130" width="30" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Right central incisor -->
+  <rect x="225" y="120" width="25" height="40" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  
+  <!-- Other teeth -->
+  <rect x="130" y="125" width="20" height="35" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <rect x="255" y="125" width="20" height="35" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  
+  <!-- Inflammation around missing tooth -->
+  <circle cx="205" cy="145" r="8" fill="#ef4444" opacity="0.3"/>
+  <circle cx="205" cy="145" r="5" fill="#ef4444" opacity="0.5"/>
+</svg>
