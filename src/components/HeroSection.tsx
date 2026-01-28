@@ -10,11 +10,14 @@ const HeroSection = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    // Wait for hydration and initial load
+    // Wait for hydration and initial load, longer for mobile
+    const isMobile = window.innerWidth < 768;
+    const delay = isMobile ? 300 : 100;
+    
     const timer = setTimeout(() => {
       setIsLoaded(true);
       controls.start('visible');
-    }, 100);
+    }, delay);
 
     return () => clearTimeout(timer);
   }, [controls]);
@@ -149,20 +152,41 @@ const HeroSection = () => {
           >
             {/* Main image/visual */}
             <div className="relative">
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl bg-linear-to-br from-blue-100 to-teal-100">
                 <Image
                   src="/hero-dental-clinic.svg"
                   alt="BrightSmile Dental Clinic"
                   width={600}
                   height={400}
-                  className="w-full h-96 lg:h-full min-h-[400px] object-cover"
+                  className="w-full h-96 lg:h-full min-h-[400px] object-contain p-4"
                   priority
+                  onError={(e) => {
+                    // Fallback if SVG fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="w-full h-96 lg:h-full min-h-[400px] flex items-center justify-center bg-linear-to-br from-blue-100 to-teal-100 p-8">
+                          <div class="text-center">
+                            <div class="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                              </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">BrightSmile Dental Clinic</h3>
+                            <p class="text-gray-600">Professional Dental Care</p>
+                          </div>
+                        </div>
+                      `;
+                    }
+                  }}
                 />
               </div>
               
-              {/* Floating cards */}
+              {/* Floating cards - Hide on small mobile to reduce jitter */}
               <motion.div 
-                className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 z-20"
+                className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 z-20 hidden sm:block"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -180,7 +204,7 @@ const HeroSection = () => {
               </motion.div>
 
               <motion.div 
-                className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 z-20"
+                className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 z-20 hidden sm:block"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
