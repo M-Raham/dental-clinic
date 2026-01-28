@@ -1,28 +1,43 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { Star, Clock, Users, Award, ArrowRight, Calendar } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    // Wait for hydration and initial load
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+      controls.start('visible');
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [controls]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+        ease: "easeOut" as const,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: "easeOut" as const,
       },
     },
@@ -43,7 +58,7 @@ const HeroSection = () => {
             className="lg:col-span-3"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            animate={controls}
           >
             {/* Eyebrow text */}
             <motion.div variants={itemVariants} className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -125,22 +140,23 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - 40% */}
+          {/* Right Side - 40% */}
           <motion.div 
             className="lg:col-span-2 relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            initial={{ opacity: 0, x: 30 }}
+            animate={isLoaded ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Main image/visual */}
             <div className="relative">
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/hero-dental-clinic.webp"
+                  src="/hero-dental-clinic.svg"
                   alt="BrightSmile Dental Clinic"
                   width={600}
                   height={400}
                   className="w-full h-96 lg:h-full min-h-[400px] object-cover"
+                  priority
                 />
               </div>
               
@@ -148,8 +164,8 @@ const HeroSection = () => {
               <motion.div 
                 className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 z-20"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="flex items-center space-x-3">
@@ -166,8 +182,8 @@ const HeroSection = () => {
               <motion.div 
                 className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 z-20"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
+                animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="flex items-center space-x-3">
